@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/search_bar" />
+
+    <com.example.coreui.view.ElevationToolbarLayout
+        android:id="@+id/weather_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        tools:alpha="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            style="@style/ToolbarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_toolbar_height"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                style="@style/TextH1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/commonui_edge_padding"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbarClose"
+                app:layout_constraintStart_toEndOf="@id/toolbarClose"
+                app:layout_constraintTop_toTopOf="@+id/toolbarClose" />
+
+            <ImageView
+                android:id="@+id/toolbarClose"
+                style="@style/BackButton"
+                android:layout_marginStart="@dimen/common_edge_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.example.coreui.view.PulleyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/current_weather_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/smallest_margin"
+                        android:layout_marginStart="@dimen/forecast_three_day_title_margin_start"
+                        android:fontFamily="@font/hind_bold"
+                        android:text="@string/current_weather"
+                        android:textColor="@color/main_text_color"
+                        android:textSize="@dimen/forecast_status_section_title" />
+
+                    <Button
+                        android:id="@+id/watch_on_youtube_button"
+                        style="@style/TextH4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/commonui_edge_padding"
+                        android:layout_marginEnd="@dimen/commonui_edge_padding"
+                        android:background="@drawable/bg_black_flat_button"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/smallest_margin"
+                        android:text="@string/watch_on_youtube"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+                <include layout="@layout/current_weather_layout" />
+
+                <View
+                    android:id="@+id/horizontal_divider"
+                    style="@style/HorizontalDivider"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/small_margin" />
+
+                <TextView
+                    android:id="@+id/forecast_five_day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/forecast_three_day_title_margin_start"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:fontFamily="@font/hind_bold"
+                    android:text="@string/forecast_five_days"
+                    android:textColor="@color/main_text_color"
+                    android:textSize="@dimen/forecast_status_section_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/forecast_five_days_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:overScrollMode="never"
+                        android:paddingStart="@dimen/commonui_edge_padding"
+                        android:paddingEnd="@dimen/commonui_edge_padding">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.example.coreui.view.PulleyScrollView>
+    </com.example.coreui.view.ElevationToolbarLayout>
+</LinearLayout>

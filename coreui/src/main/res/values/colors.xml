@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Base Colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="main_text_color">#1b3853</color>
+
+    <color name="light_gray">#EFEFF8</color>
+    <color name="dark_gray">#8C8FA9</color>
+
+    <color name="red">#ED5959</color>
+    <color name="green">#62CBB4</color>
+
+    <color name="black">#171A32</color>
+    <color name="black_pressed">@color/dark_gray</color>
+    <color name="black_disabled">#C3C4CC</color>
+
+    <color name="forecast_status_days_item_background_color">#ebf2f5</color>
+    <color name="forecast_status_item_indicator_color_active">#a9bac3</color>
+    <color name="forecast_status_days_item_background_stroke_color">#33a9bac3</color>
+</resources>

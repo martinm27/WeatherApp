@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_h1">20sp</dimen>
+    <dimen name="text_h3">14sp</dimen>
+    <dimen name="text_h4">11sp</dimen>
+    <dimen name="text_subtitle">12sp</dimen>
+
+    <dimen name="bg_radius">8dp</dimen>
+    <dimen name="divider_size">1dp</dimen>
+
+    <dimen name="common_edge_margin">11dp</dimen>
+    <dimen name="commonui_edge_padding">22dp</dimen>
+
+    <dimen name="common_inner_margin">11dp</dimen>
+    <dimen name="common_toolbar_height">64dp</dimen>
+
+    <dimen name="min_clickable_icon_size">48dp</dimen>
+    <dimen name="min_clickable_icon_padding">@dimen/common_inner_margin</dimen>
+
+    <dimen name="elevation_toolbar_elevation">4dp</dimen>
+
+    <dimen name="forecast_status_section_title">18sp</dimen>
+
+</resources>

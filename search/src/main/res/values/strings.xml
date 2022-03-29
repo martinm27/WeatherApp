@@ -1,0 +1,11 @@
+<resources>
+    <string name="search_weather_by_city">Search weather by city</string>
+    <string name="temperature">Temp</string>
+    <string name="min_temperature">Min</string>
+    <string name="max_temperature">Max</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="forecast_five_days">5-Day Weather Forecast</string>
+    <string name="current_weather">Current weather</string>
+    <string name="watch_on_youtube">Watch on YouTube</string>
+</resources>

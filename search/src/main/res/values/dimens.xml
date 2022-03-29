@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="forecast_three_day_title_margin_start">16dp</dimen>
+    <dimen name="smallest_margin">8dp</dimen>
+    <dimen name="small_margin">16dp</dimen>
+
+    <!-- Forecast Status -->
+    <dimen name="forecast_days_stroke_width">1dp</dimen>
+
+    <dimen name="forecast_status_section_title">18sp</dimen>
+
+    <dimen name="forecast_status_days_date">18sp</dimen>
+
+    <dimen name="forecast_status_day_item_title_vertical_margin">10dp</dimen>
+
+    <dimen name="forecast_days_status_background_radius">2dp</dimen>
+    <dimen name="forecast_status_item_indicator_padding">6dp</dimen>
+
+    <dimen name="forecast_weather_item_title_text_size">21sp</dimen>
+</resources>

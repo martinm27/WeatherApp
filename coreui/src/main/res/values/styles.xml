@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base content container styles -->
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="selectableItemBackground">?android:selectableItemBackgroundBorderless</item>
+        <item name="android:colorControlHighlight">@color/ripple_material_dark</item>
+        <item name="android:fontFamily">@font/hind_regular</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <!-- Base Text Styles -->
+    <style name="BaseText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextH1" parent="BaseText">
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_h1</item>
+    </style>
+
+    <style name="TextH3" parent="BaseText">
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_h3</item>
+    </style>
+
+    <style name="TextH4" parent="BaseText">
+        <item name="android:fontFamily">@font/cerebri_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_h4</item>
+    </style>
+
+    <style name="TextSubtitle" parent="BaseText">
+        <item name="android:fontFamily">@font/cerebri_sans_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text_subtitle</item>
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <!-- Other -->
+
+    <style name="Icon">
+        <item name="android:layout_width">@dimen/min_clickable_icon_size</item>
+        <item name="android:layout_height">@dimen/min_clickable_icon_size</item>
+        <item name="android:padding">@dimen/min_clickable_icon_padding</item>
+    </style>
+
+    <style name="IconButton" parent="Icon">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="BackButton" parent="IconButton">
+        <item name="srcCompat">@drawable/ic_arrow_left</item>
+    </style>
+
+    <style name="BaseDivider">
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="HorizontalDivider" parent="BaseDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_size</item>
+    </style>
+
+</resources>

@@ -1,0 +1,180 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/smallest_margin"
+    android:layout_marginBottom="@dimen/smallest_margin"
+    android:background="@drawable/forecast_days_status_background">
+
+    <TextView
+        android:id="@+id/forecast_status_days_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/commonui_edge_padding"
+        android:layout_marginTop="@dimen/forecast_status_day_item_title_vertical_margin"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_weather_item_title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tuesday (4/25/17)" />
+
+    <ImageView
+        android:id="@+id/forecast_weather_icon"
+        style="@style/Icon"
+        android:layout_marginStart="@dimen/common_edge_margin"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_status_days_date" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/commonui_edge_padding"
+        android:fontFamily="@font/hind_regular"
+        android:gravity="center_vertical"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintBottom_toTopOf="@id/forecast_weather_main_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/forecast_weather_icon"
+        app:layout_constraintTop_toTopOf="@id/forecast_weather_icon"
+        tools:text="Clear" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_subtitle"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/commonui_edge_padding"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@id/forecast_weather_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/forecast_weather_icon"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_main_title"
+        tools:text="Clear sky" />
+
+
+    <TextView
+        android:id="@+id/forecast_weather_main_temperature_title"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/commonui_edge_padding"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        android:text="@string/temperature"
+        app:layout_constraintEnd_toStartOf="@+id/forecast_weather_main_min_temperature_title"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_icon" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_min_temperature_title"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        android:text="@string/min_temperature"
+        app:layout_constraintEnd_toStartOf="@+id/forecast_weather_main_max_temperature_title"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/forecast_weather_main_temperature_title"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_icon" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_max_temperature_title"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        android:text="@string/max_temperature"
+        app:layout_constraintEnd_toStartOf="@+id/forecast_weather_main_pressure_title"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/forecast_weather_main_min_temperature_title"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_icon" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_pressure_title"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        android:text="@string/pressure"
+        app:layout_constraintEnd_toStartOf="@+id/forecast_weather_main_humidity_title"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/forecast_weather_main_max_temperature_title"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_icon" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_humidity_title"
+        style="@style/TextSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/commonui_edge_padding"
+        android:layout_marginEnd="@dimen/commonui_edge_padding"
+        android:text="@string/humidity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/forecast_weather_main_pressure_title"
+        app:layout_constraintTop_toBottomOf="@id/forecast_weather_icon" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_temperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintEnd_toEndOf="@+id/forecast_weather_main_temperature_title"
+        app:layout_constraintStart_toStartOf="@+id/forecast_weather_main_temperature_title"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_weather_main_temperature_title"
+        tools:text="25" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_min_temperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintEnd_toEndOf="@+id/forecast_weather_main_min_temperature_title"
+        app:layout_constraintStart_toStartOf="@+id/forecast_weather_main_min_temperature_title"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_weather_main_min_temperature_title"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_max_temperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintEnd_toEndOf="@+id/forecast_weather_main_max_temperature_title"
+        app:layout_constraintStart_toStartOf="@+id/forecast_weather_main_max_temperature_title"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_weather_main_max_temperature_title"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_pressure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintEnd_toEndOf="@+id/forecast_weather_main_pressure_title"
+        app:layout_constraintStart_toStartOf="@+id/forecast_weather_main_pressure_title"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_weather_main_pressure_title" />
+
+    <TextView
+        android:id="@+id/forecast_weather_main_humidity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hind_regular"
+        android:textColor="@color/main_text_color"
+        android:textSize="@dimen/forecast_status_days_date"
+        app:layout_constraintEnd_toEndOf="@id/forecast_weather_main_humidity_title"
+        app:layout_constraintStart_toStartOf="@+id/forecast_weather_main_humidity_title"
+        app:layout_constraintTop_toBottomOf="@+id/forecast_weather_main_temperature_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

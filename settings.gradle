@@ -1,0 +1,2 @@
+include ':app', ':data', ':coreui', ':core', ':connection', ':search', ':navigation'
+rootProject.name='Weather Mihalic'
